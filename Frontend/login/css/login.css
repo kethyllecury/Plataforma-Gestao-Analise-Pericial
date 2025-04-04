@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000150 !important;
+}
+
+.fingerprint {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.form-login {
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
