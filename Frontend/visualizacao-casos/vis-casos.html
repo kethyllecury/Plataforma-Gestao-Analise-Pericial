@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/vis-casos.css">
     <style>
-        /* CSS mínimo para ajustar margens e padding */
         main {
             margin-top: 70px; /* Ajuste para evitar sobreposição com a navbar fixa */
         }
 
         .bg-azul-escuro {
             background-color: #1E2A38 !important;
+            color: white !important;
         }
 
         .status-em-andamento {
@@ -29,73 +29,93 @@
         .status-finalizado {
             background-color: #2D6A4F; /* Cor para "Finalizado" */
             color: white;
+        }   
+
+        /* Ajuste do botão Filtrar casos */
+        .btn-filtrar-casos {
+            background-color: #1E2A38;
+            color: white;
+            border-color: #1E2A38;
+            height: 38px;
+            white-space: nowrap;
         }
-        /* Ajuste para distanciar a tabela das bordas laterais */
-        .table-container {
-            margin-left: 5%;
-            margin-right: 5%;
+        .btn-filtrar-casos:hover {
+            background-color: #2A3A4A; /* Tom mais claro para hover */
+            border-color: #2A3A4A;
         }
+
+        /* Ajuste dos botões Adicionar caso e Acessar caso */
+        .btn-adicionar-caso, .btn-acessar-caso {
+            background-color: #1A4D77;
+            border-color: #1A4D77;
+            color: white;
+        }
+        .btn-adicionar-caso:hover, .btn-acessar-caso:hover {
+            background-color: #2A5F8A; /* Tom mais claro para hover */
+            border-color: #2A5F8A;
+        }
+
     </style>
 </head>
 <body>
     <header class="pb-4">
-            <nav class="bg-azul-escuro navbar navbar-dark bg-body-tertiary fixed-top py-3">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <a class="navbar-brand ms-auto" href="#"><i class="bi bi-person-fill"></i></a>
-                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li class="nav-item">
-                                    <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" href="#">Link</a>
-                                </li>
-                            </ul>
-                        </div>
+        <nav class="bg-azul-escuro navbar navbar-dark bg-body-tertiary fixed-top py-3">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand ms-auto" href="#"><i class="bi bi-person-fill"></i></a>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#">Link</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
+            </div>
+        </nav>
     </header>
-    <main class="container-fluid">
+    <main class="container">
         <!-- Barra de pesquisa e botões -->
-        <div class="row mx-3">
+        <div class="row my-3 py-2">
             <div class="col-12 col-md-6 mb-2">
-                <div class="d-flex gap-3">
+                <div class="d-flex gap-3 align-items-center">
                     <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-search"></i></span>
-                        <input type="text" class="form-control" placeholder="Pesquise um caso específico">
+                        <input type="text" class="form-control" placeholder="Pesquise um caso específico" style="height: 38px;">
                     </div>
-                    <button class="btn btn-outline-primary me-2"><i class="bi bi-funnel-fill"></i> Filtrar casos</button>
+                    <button class="btn btn-filtrar-casos"><i class="bi bi-funnel-fill"></i> Filtrar casos</button>
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-2 text-md-end">
-                <button class="btn btn-primary"><i class="bi bi-plus"></i> Adicionar caso</button>
+                <button class="btn btn-adicionar-caso"><i class="bi bi-plus"></i> Adicionar caso</button>
                 <a class="mx-3"><i class="bi bi-question-circle"></i></a>
             </div> 
         </div>
 
         <!-- Tabela -->
         <div class="row">
-            <div class="col-12 table-container"> <!-- Ajuste para margens laterais -->
+            <div class="col-12 table-container">
                 <div class="table-responsive">
                     <table class="table table-striped table-hover">
-                        <thead class="table-dark">
-                            <tr>
-                                <th scope="col">Título do Caso</th>
-                                <th scope="col">Descrição curta</th>
-                                <th scope="col">Tipo</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Data registro</th>
-                                <th scope="col">Responsável</th>
-                                <th scope="col">Ação</th>
+                        <thead >
+                            <tr class="bg-azul-escuro">
+                                <th class="bg-azul-escuro" scope="col">Título do Caso</th>
+                                <th class="bg-azul-escuro" scope="col">Descrição curta</th>
+                                <th class="bg-azul-escuro" scope="col">Tipo</th>
+                                <th class="bg-azul-escuro" scope="col">Status</th>
+                                <th class="bg-azul-escuro" scope="col">Data registro</th>
+                                <th class="bg-azul-escuro" scope="col">Responsável</th>
+                                <th class="bg-azul-escuro" scope="col">Ação</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -106,16 +126,16 @@
                                 <td><span class="badge status-em-andamento">Em andamento</span></td>
                                 <td>12 Mar 2025</td>
                                 <td>Dr. Marcos Silva</td>
-                                <td><a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-eye-fill"></i> Acessar caso</a></td>
+                                <td><a href="#" class="btn btn-acessar-caso btn-sm"><i class="bi bi-eye-fill"></i> Acessar caso</a></td>
                             </tr>
                             <tr>
                                 <td>Erro odontológico em procedimento</td>
                                 <td>Paciente sofreu danos após extração incorreta.</td>
                                 <td>Acidente</td>
                                 <td><span class="badge status-arquivado">Arquivado</span></td>
-                                <td>12 Out 2024</td> <!-- Corrigido para 2024 -->
+                                <td>12 Out 2024</td>
                                 <td>Dr. Ana Souza</td>
-                                <td><a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-eye-fill"></i> Acessar caso</a></td>
+                                <td><a href="#" class="btn btn-acessar-caso btn-sm"><i class="bi bi-eye-fill"></i> Acessar caso</a></td>
                             </tr>
                             <tr>
                                 <td>Fratura facial por agressão</td>
@@ -124,7 +144,7 @@
                                 <td><span class="badge status-em-andamento">Em andamento</span></td>
                                 <td>25 Abr 2024</td>
                                 <td>Dr. Marcos Silva</td>
-                                <td><a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-eye-fill"></i> Acessar caso</a></td>
+                                <td><a href="#" class="btn btn-acessar-caso btn-sm"><i class="bi bi-eye-fill"></i> Acessar caso</a></td>
                             </tr>
                             <tr>
                                 <td>Mordida forense em agressão</td>
@@ -133,25 +153,25 @@
                                 <td><span class="badge status-em-andamento">Em andamento</span></td>
                                 <td>05 Mar 2023</td>
                                 <td>Dr. Marcos Silva</td>
-                                <td><a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-eye-fill"></i> Acessar caso</a></td>
+                                <td><a href="#" class="btn btn-acessar-caso btn-sm"><i class="bi bi-eye-fill"></i> Acessar caso</a></td>
                             </tr>
                             <tr>
                                 <td>Identificação restos mortais</td>
                                 <td>Análise de arcada dentária em ossada.</td>
                                 <td>Acidente</td>
                                 <td><span class="badge status-finalizado">Finalizado</span></td>
-                                <td>12 Mar 2023</td> <!-- Corrigido para 2023 -->
+                                <td>12 Mar 2023</td>
                                 <td>Dr. Marcos Silva</td>
-                                <td><a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-eye-fill"></i> Acessar caso</a></td>
+                                <td><a href="#" class="btn btn-acessar-caso btn-sm"><i class="bi bi-eye-fill"></i> Acessar caso</a></td>
                             </tr>
                             <tr>
                                 <td>Mordida forense em agressão</td>
                                 <td>Paciente sofreu danos após extração incorreta.</td>
                                 <td>Identificação de vítima</td>
                                 <td><span class="badge status-arquivado">Arquivado</span></td>
-                                <td>12 Mar 2022</td> <!-- Corrigido para 2022 -->
+                                <td>12 Mar 2022</td>
                                 <td>Dr. Marcos Silva</td>
-                                <td><a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-eye-fill"></i> Acessar caso</a></td>
+                                <td><a href="#" class="btn btn-acessar-caso btn-sm"><i class="bi bi-eye-fill"></i> Acessar caso</a></td>
                             </tr>
                         </tbody>
                     </table> 
