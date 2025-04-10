@@ -1,0 +1,18 @@
+#btn-adicionar-evidencia, #btn-cadastrar-evidencia, #btn-gerar-relatorio{
+    background-color: #1A4D77;
+    color: white;
+}
+
+#btn-visualizar-informacoes{
+    background-color: #537898;
+}
+
+a#visualizacao-casos{
+    color: black;
+}
+
+@media screen and (max-width: 768px) {
+    .arquivo-proprietario, .arquivo-registro-dia, .arquivo-memoria, .arquivo-proprietario, .arquivo-registro-dia, .arquivo-memoria{
+        display: none;
+    }
+}
