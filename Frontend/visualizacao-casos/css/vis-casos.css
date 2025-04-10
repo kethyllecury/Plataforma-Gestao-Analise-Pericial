@@ -1,0 +1,45 @@
+main {
+    margin-top: 70px; /* Ajuste para evitar sobreposição com a navbar fixa */
+}
+
+.bg-azul-escuro {
+    background-color: #1E2A38 !important;
+    color: white !important;
+}
+
+.status-em-andamento {
+    background-color: #20639B; /* Cor para "Em andamento" */
+    color: white;
+}
+.status-arquivado {
+    background-color: #B22222; /* Cor para "Arquivado" */
+    color: white;
+}
+.status-finalizado {
+    background-color: #2D6A4F; /* Cor para "Finalizado" */
+    color: white;
+}   
+
+/* Ajuste do botão Filtrar casos */
+.btn-filtrar-casos {
+    background-color: #1E2A38;
+    color: white;
+    border-color: #1E2A38;
+    height: 38px;
+    white-space: nowrap;
+}
+.btn-filtrar-casos:hover {
+    background-color: #2A3A4A; /* Tom mais claro para hover */
+    border-color: #2A3A4A;
+}
+
+/* Ajuste dos botões Adicionar caso e Acessar caso */
+.btn-adicionar-caso, .btn-acessar-caso {
+    background-color: #1A4D77;
+    border-color: #1A4D77;
+    color: white;
+}
+.btn-adicionar-caso:hover, .btn-acessar-caso:hover {
+    background-color: #2A5F8A; /* Tom mais claro para hover */
+    border-color: #2A5F8A;
+}
