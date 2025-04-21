@@ -9,15 +9,6 @@ body {
     background-color: white;
 }
 
-header {
-    background-color: #1E2A38;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 20px;
-    align-items: center;
-}
-
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
@@ -25,15 +16,6 @@ header {
 
 .user-icon {
     font-size: 24px;
-}
-
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: white;    
-    padding: 30px;
-    border-radius: 0px;
 }
 
 h2 {
@@ -100,3 +82,121 @@ button:hover {
     background-color: #293c52;
     color: white;
 }
+
+.form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .form-control, .form-select {
+            margin-bottom: 1.5rem;
+        }
+        .btn-spacing {
+            margin: 0 0.5rem;
+        }
+        .invalid-feedback {
+            display: none;
+        }
+        .was-validated .form-control:invalid,
+        .was-validated .form-select:invalid,
+        .was-validated .form-control:not(.form-control:valid),
+        .was-validated .form-select:not(.form-select:valid) {
+            border-color: #dc3545;
+        }
+        .was-validated .form-control:invalid ~ .invalid-feedback,
+        .was-validated .form-select:invalid ~ .invalid-feedback {
+            display: block;
+        }
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .autocomplete-items div {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #d4d4d4;
+        }
+        .autocomplete-items div:hover {
+            background-color: #e9ecef;
+        }
+
+        .form-header{
+            position: relative;
+        }
+
+        .btn-close-custom {
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            position: absolute;
+            top: -25%;
+            right: 0;
+        }
+
+/* grok code */
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .form-control, .form-select {
+            margin-bottom: 1.5rem;
+        }
+        .btn-spacing {
+            margin: 0 0.5rem;
+        }
+        .invalid-feedback {
+            display: none;
+        }
+        .was-validated .form-control:invalid,
+        .was-validated .form-select:invalid,
+        .was-validated .form-control:not(.form-control:valid),
+        .was-validated .form-select:not(.form-select:valid) {
+            border-color: #dc3545;
+        }
+        .was-validated .form-control:invalid ~ .invalid-feedback,
+        .was-validated .form-select:invalid ~ .invalid-feedback {
+            display: block;
+        }
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .autocomplete-items div {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #d4d4d4;
+        }
+        .autocomplete-items div:hover {
+            background-color: #e9ecef;
+        }
+
+        .form-header{
+            position: relative;
+        }
+
+        .btn-close-custom {
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
