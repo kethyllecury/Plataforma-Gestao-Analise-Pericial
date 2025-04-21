@@ -7,6 +7,10 @@ main {
     color: white !important;
 }
 
+.bg-azul-escuro:first-child{
+    border-top-left-radius: 10px;
+}
+
 .status-em-andamento {
     background-color: #20639B; /* Cor para "Em andamento" */
     color: white;
