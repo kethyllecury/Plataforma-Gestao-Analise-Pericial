@@ -1,21 +1,36 @@
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #000150 !important;
+    background-color: #1E2A38 !important;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.container{
+    overflow-x: hidden;
+    position: relative;
 }
 
 .fingerprint {
-    width: 250px;
+    width: 300px;
     margin-bottom: 20px;
 }
 
 .form-login {
     background-color: #fff;
     border-radius: 10px;
-    max-width: 400px;
+    width: 100%;
+    max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
