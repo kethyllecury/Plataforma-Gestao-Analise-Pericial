@@ -1,3 +1,7 @@
+body{
+    padding: 0 20px;
+}
+
 #btn-adicionar-evidencia, #btn-cadastrar-evidencia, #btn-gerar-relatorio{
     background-color: #1A4D77;
     color: white;
@@ -11,8 +15,22 @@ a#visualizacao-casos{
     color: black;
 }
 
+.arquivo-item{
+    background-color: white;
+}
+
 @media screen and (max-width: 768px) {
     .arquivo-proprietario, .arquivo-registro-dia, .arquivo-memoria, .arquivo-proprietario, .arquivo-registro-dia, .arquivo-memoria{
         display: none;
+    }
+
+    #rota-caso{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 458px){
+    #rota-caso{
+        font-size: 13px;
     }
 }

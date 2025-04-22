@@ -16,7 +16,7 @@ th.bg-azul-escuro:first-child{
 }
 
 th.bg-azul-escuro:last-child{
-    border-top-right-radius: 10px
+    border-top-right-radius: 10px !important;
 }
 
 .status-em-andamento {
@@ -69,9 +69,6 @@ th.bg-azul-escuro:last-child{
 }
 
 @media screen and (max-width: 768px){
-    body{
-        background-color: green;
-    }
 
     .descricao-caso, .bi-eye-fill{
         display: none;
@@ -79,9 +76,6 @@ th.bg-azul-escuro:last-child{
 }
 
 @media screen and (max-width: 576px) {
-    body{
-        background-color: red;
-    }
 
     .data-abertura-caso{
         display: none;
