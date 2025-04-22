@@ -37,21 +37,22 @@
             </div>
         </nav>
     </header>
-    <main class="container">
+    <main class="container-lg container-md">
         <!-- Barra de pesquisa e botões -->
         <div class="row my-3 py-2">
             <div class="col-12 col-md-6 mb-2">
-                <div class="d-flex gap-3 align-items-center">
-                    <div class="input-group">
+                <div class="d-flex gap-3 align-items-top">
+                    <div class="input-group mb-2">
                         <span class="input-group-text"><i class="bi bi-search"></i></span>
                         <input type="text" class="form-control" placeholder="Pesquise um caso específico" style="height: 38px;">
                     </div>
-                    <button class="btn btn-filtrar-casos"><i class="bi bi-funnel-fill"></i> Filtrar casos</button>
+                    <button class="btn btn-filtrar-casos btn-md d-flex align-items-center justify-content-center gap-2 py-2"><i class="bi bi-funnel-fill"></i> Filtrar casos</button>
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-2 text-md-end">
-                <a href="../cadastro-casos/cadastro-caso.html" class="btn btn-adicionar-caso"><i class="bi bi-plus"></i> Adicionar caso</a>
-                <a class="mx-3"><i class="bi bi-question-circle"></i></a>
+                <a href="../cadastro-casos/cadastro-caso.html" class="btn btn-adicionar-caso d-flex gap-2 align-items-center justify-content-center"><i class="bi bi-plus" style="font-size: 20px;"></i> Adicionar caso</a>
+                <!-- botão de dúvidas -->
+                <!-- <a class="mx-3"><i class="bi bi-question-circle"></i></a> -->
             </div> 
         </div>
 
@@ -62,26 +63,26 @@
                     <table class="table table-striped table-hover">
                         <thead class="rounded-1">
                             <tr class="bg-azul-escuro">
-                                <th class="bg-azul-escuro" scope="col">Título do Caso</th>
-                                <th class="bg-azul-escuro" scope="col">Descrição curta</th>
-                                <th class="bg-azul-escuro" scope="col">Tipo</th>
-                                <th class="bg-azul-escuro" scope="col">Status</th>
-                                <th class="bg-azul-escuro" scope="col">Data registro</th>
-                                <th class="bg-azul-escuro" scope="col">Responsável</th>
-                                <th class="bg-azul-escuro" scope="col">Ação</th>
+                                <th class="bg-azul-escuro titulo-caso" scope="col">Título do Caso</th>
+                                <th class="bg-azul-escuro descricao-caso" scope="col">Descrição curta</th>
+                                <th class="bg-azul-escuro tipo-caso" scope="col">Tipo</th>
+                                <th class="bg-azul-escuro status-caso" scope="col">Status</th>
+                                <th class="bg-azul-escuro data-abertura-caso" scope="col">Data registro</th>
+                                <th class="bg-azul-escuro perito-caso" scope="col">Responsável</th>
+                                <th class="bg-azul-escuro acao-caso" scope="col">Ação</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Mordida forense em agressão</td>
-                                <td>Comparação de arcada dentária com suspeito.</td>
-                                <td>Identificação de vítima</td>
-                                <td><span class="badge status-em-andamento">Em andamento</span></td>
-                                <td>12 Mar 2025</td>
-                                <td>Dr. Marcos Silva</td>
+                                <td class="titulo-caso">Mordida forense em agressão</td>
+                                <td class="descricao-caso">Comparação de arcada dentária com suspeito.</td>
+                                <td class="tipo-caso">Identificação de vítima</td>
+                                <td class="status-caso"><span class="badge status-em-andamento">Em andamento</span></td>
+                                <td class="data-abertura-caso">12 Mar 2025</td>
+                                <td class="perito-caso">Dr. Marcos Silva</td>
                                 <td><a href="../visualizacao-caso-especifico/visualizacao-de-caso.html" class="btn btn-acessar-caso btn-sm"><i class="bi bi-eye-fill"></i> Acessar caso</a></td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>Erro odontológico em procedimento</td>
                                 <td>Paciente sofreu danos após extração incorreta.</td>
                                 <td>Acidente</td>
@@ -125,7 +126,7 @@
                                 <td>12 Mar 2022</td>
                                 <td>Dr. Marcos Silva</td>
                                 <td><a href="#" class="btn btn-acessar-caso btn-sm"><i class="bi bi-eye-fill"></i> Acessar caso</a></td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table> 
                 </div>

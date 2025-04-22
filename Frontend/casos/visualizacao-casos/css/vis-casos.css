@@ -7,8 +7,16 @@ main {
     color: white !important;
 }
 
-.bg-azul-escuro:first-child{
+th.bg-azul-escuro{
+    padding: 13px;
+}
+
+th.bg-azul-escuro:first-child{
     border-top-left-radius: 10px;
+}
+
+th.bg-azul-escuro:last-child{
+    border-top-right-radius: 10px
 }
 
 .status-em-andamento {
@@ -31,10 +39,16 @@ main {
     border-color: #1E2A38;
     height: 38px;
     white-space: nowrap;
+    width: 170px !important;
 }
 .btn-filtrar-casos:hover {
     background-color: #2A3A4A; /* Tom mais claro para hover */
     border-color: #2A3A4A;
+}
+
+.btn-adicionar-caso{
+    width: 160px !important;
+    height: 38px;
 }
 
 /* Ajuste dos botões Adicionar caso e Acessar caso */
@@ -46,4 +60,31 @@ main {
 .btn-adicionar-caso:hover, .btn-acessar-caso:hover {
     background-color: #2A5F8A; /* Tom mais claro para hover */
     border-color: #2A5F8A;
+}
+
+@media screen and (max-width: 992px){
+    .tipo-caso, .perito-caso{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        background-color: green;
+    }
+
+    .descricao-caso, .bi-eye-fill{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body{
+        background-color: red;
+    }
+
+    .data-abertura-caso{
+        display: none;
+    }
+    
 }
