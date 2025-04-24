@@ -13,14 +13,20 @@ async function retornarCasos() {
     }
 }
 
-function templateCaso(caso) {
+export function templateCaso(caso) {
 
     let data = caso.data.slice(0, 10).split("-");
     let dataFormatada = `${data[2]}/${data[1]}/${data[0]}`;
+    let descricao = caso.descricao
+
+    if (descricao.length > 150){
+        descricao = descricao.slice(0, 130);
+        descricao += ' ...'
+    }
 
     return `<tr>
                 <td class="titulo-caso">${caso.nome}</td>
-                <td class="descricao-caso">${caso.descricao}</td>
+                <td class="descricao-caso">${descricao}</td>
                 <td class="tipo-caso">${caso.tipo}</td>
                 <td class="status-caso"><span class="badge status-${caso.status.toLowerCase().replace(" ", "-")}">${caso.status}</span></td>
                 <td class="data-abertura-caso">${dataFormatada}</td>

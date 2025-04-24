@@ -33,7 +33,7 @@ function templateCaso(caso) {
                 <td class="descricao-caso">${caso.descricao}</td>
                 <td class="tipo-caso">${caso.tipo}</td>
                 <td class="status-caso"><span class="badge status-${caso.status.toLowerCase().replace(" ", "-")}">${caso.status}</span></td>
-                <td class="data-abertura-caso">${dataFormatada}</td>
+                <td class="data-abertura-caso">${caso.data}</td>
                 <td class="perito-caso">${caso.peritoResponsavel}</td>
             </tr>`;
 }
