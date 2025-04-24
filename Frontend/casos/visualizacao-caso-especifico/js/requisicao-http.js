@@ -1,7 +1,6 @@
 const tabelaContainer = document.querySelector('#tabela-corpo');
 console.log(tabelaContainer)
 
-
 // Get id from url
 const urlSerachParams = new URLSearchParams(window.location.search)
 const casoId = urlSerachParams.get("id")
@@ -12,7 +11,9 @@ async function getIndividualCaso(){
         const url = `http://localhost:3000/casos/${casoId}`;
         const response = await fetch(url);
         const caso = await response.json()
-        console.log(caso);
+        // console.log(caso);
+        window.document.title = `${caso.nome}`
+        
         tabelaContainer.innerHTML = templateCaso(caso)
         
     }
