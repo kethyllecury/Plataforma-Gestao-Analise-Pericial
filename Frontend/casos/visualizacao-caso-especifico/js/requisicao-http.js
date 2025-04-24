@@ -1,15 +1,24 @@
-async function retornarCasos() {
-    const url = "http://localhost:3000/casos";
-    const tabela = document.querySelector('#tabela-corpo');
-    
-    try {
-        const requisicao = await fetch(url);
-        const data = await requisicao.json();
+const tabelaContainer = document.querySelector('#tabela-corpo');
+console.log(tabelaContainer)
+
+
+// Get id from url
+const urlSerachParams = new URLSearchParams(window.location.search)
+const casoId = urlSerachParams.get("id")
+// console.log(postId);
+
+async function getIndividualCaso(){
+    try{
+        const url = `http://localhost:3000/casos/${casoId}`;
+        const response = await fetch(url);
+        const caso = await response.json()
+        console.log(caso);
+        tabelaContainer.innerHTML = templateCaso(caso)
         
-        // Mapeia os casos para criar um array de strings HTML e junta com join('')
-        tabela.innerHTML = data.map(caso => templateCaso(caso)).join('');
-    } catch (erro) {
-        alert(`Erro na requisição: ${erro.message}`);
+    }
+    catch{
+        console.log('Erro');
+        
     }
 }
 
@@ -25,11 +34,10 @@ function templateCaso(caso) {
                 <td class="status-caso"><span class="badge status-${caso.status.toLowerCase().replace(" ", "-")}">${caso.status}</span></td>
                 <td class="data-abertura-caso">${dataFormatada}</td>
                 <td class="perito-caso">${caso.peritoResponsavel}</td>
-                <td><a href="../visualizacao-caso-especifico/visualizacao-de-caso.html?id=${caso.id}" class="btn btn-acessar-caso btn-sm">Acessar caso</a></td>
             </tr>`;
 }
 
 // Executa a função após o DOM estar carregado
 document.addEventListener('DOMContentLoaded', () => {
-    retornarCasos();
+    getIndividualCaso();
 });
