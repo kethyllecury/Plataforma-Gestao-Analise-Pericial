@@ -1,0 +1,109 @@
+{
+  "casos": [
+    {
+      "nome": "Caso 001 - Lesões Corporais",
+      "local": "Rua das Flores, 123, São Paulo",
+      "data": "2025-04-20T00:00:00.000Z",
+      "hora": "14:30",
+      "descricao": "Análise de lesões corporais em vítima de agressão física.",
+      "tipo": "Lesões Corporais",
+      "peritoResponsavel": "Marcos",
+      "anexos": [
+        "data:image/jpeg;base64,/9j/4AAQSkZJRg..."
+      ],
+      "status": "Em andamento",
+      "id": "2cf4"
+    },
+    {
+      "nome": "Caso 002 - Identificação Dental",
+      "local": "Avenida Central, 456, Rio de Janeiro",
+      "data": "2025-04-18T00:00:00.000Z",
+      "hora": "09:00",
+      "descricao": "Identificação de indivíduo por arcos dentais em restos mortais.",
+      "tipo": "Identificação por Arcos Dentais",
+      "peritoResponsavel": "Geraldo Silva",
+      "anexos": [],
+      "status": "Finalizado",
+      "id": "a72f"
+    },
+    {
+      "nome": "Caso 003 - Estimativa de Idade",
+      "local": "Praça da Liberdade, 789, Belo Horizonte",
+      "data": "2025-04-19T00:00:00.000Z",
+      "hora": "11:15",
+      "descricao": "Estimativa de idade de indivíduo não identificado com base em ossos.",
+      "tipo": "Estimativa de Idade",
+      "peritoResponsavel": "Ratão Pereira",
+      "anexos": [
+        "data:application/pdf;base64,JVBERi0xLj..."
+      ],
+      "status": "Em andamento",
+      "id": "c290"
+    },
+    {
+      "nome": "Caso 004 - Marcas de Mordida",
+      "local": "Rua do Comércio, 101, Salvador",
+      "data": "2025-04-21T00:00:00.000Z",
+      "hora": "16:45",
+      "descricao": "Exame de marcas de mordida em vítima de ataque.",
+      "tipo": "Exames de Marcas de Mordida",
+      "peritoResponsavel": "Alice Campos",
+      "anexos": [
+        "data:image/png;base64,iVBORw0KGgo..."
+      ],
+      "status": "Arquivado",
+      "id": "8618"
+    },
+    {
+      "id": "f481",
+      "nome": "Marcas de Mordida",
+      "local": "Rua do Comércio, 101, Salvador",
+      "data": "2025-04-21T00:00:00.000Z",
+      "hora": "16:45",
+      "descricao": "Exame de marcas de mordida em vítima de ataque.",
+      "tipo": "Exames de Marcas de Mordida",
+      "peritoResponsavel": "Alice Campos",
+      "anexos": [],
+      "status": "Em andamento"
+    },
+    {
+      "id": "d451",
+      "nome": "Assassinato João Ibura",
+      "local": "Rua do Marco Zero, 101, Recife",
+      "data": "2025-04-21T00:00:00.000Z",
+      "hora": "16:45",
+      "descricao": "Exame de marcas de mordida em vítima de ataque.",
+      "tipo": "Exames de Marcas de Mordida",
+      "peritoResponsavel": "Alice Campos",
+      "anexos": [],
+      "status": "Em andamento"
+    },
+    {
+      "id": "9d14",
+      "nome": "Corpo achado Célio Henrique",
+      "local": "Rua do Marco Zero, 101, Recife",
+      "data": "2025-04-21T00:00:00.000Z",
+      "hora": "16:45",
+      "descricao": "Exame de impacto de moto com crânio",
+      "tipo": "Exames de Marcas de Mordida",
+      "peritoResponsavel": "Ket Silva",
+      "anexos": [],
+      "status": "arquivado"
+    },
+    {
+      "id": "ec33",
+      "nome": "Corpo decotado Rhuna ",
+      "local": "Rua do Marco Zero, 101, Recife",
+      "data": "2025-04-21T00:00:00.000Z",
+      "hora": "16:45",
+      "descricao": "Exame de impacto de moto com crânio",
+      "tipo": "Exames de Marcas de Mordida",
+      "peritoResponsavel": "Ket Silva",
+      "anexos": [
+        {},
+        {}
+      ],
+      "status": "arquivado"
+    }
+  ]
+}
