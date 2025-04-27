@@ -20,8 +20,8 @@ export function templateCaso(caso) {
     let descricao = caso.descricao
 
     if (descricao.length > 150){
-        descricao = descricao.slice(0, 130);
-        descricao += ' ...'
+        descricao = descricao.slice(0, 150);
+        descricao += ' ...';
     }
 
     return `<tr>
