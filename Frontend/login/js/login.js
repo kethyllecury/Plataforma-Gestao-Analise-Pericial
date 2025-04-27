@@ -29,7 +29,7 @@ form.addEventListener("submit", async (e) => {
             if (data.cargo === "admin") {
                 window.location.href = "/Frontend/adm/cadastro-usuario/cadastro-usuario.html";
             } else {
-                window.location.href = "pagina-principal.html"; //precisa trocar para outra tela caso não seja ADM
+                window.location.href = "/Frontend/casos/visualizacao-casos/vis-casos.html"; //precisa trocar para outra tela caso não seja ADM
             }
         } else {
             alert(data.message || "Falha no login");
