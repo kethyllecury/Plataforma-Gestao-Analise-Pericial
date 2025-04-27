@@ -1,5 +1,5 @@
 async function retornarCasos() {
-    const url = "http://localhost:5000/api/casos"; // URL da sua API
+    const url = "http://localhost:5000/api/casos";
     const tabela = document.querySelector('#tabela-corpo');
     const token = localStorage.getItem("token"); // Recupera o token salvo no login
 
